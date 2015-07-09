@@ -11,6 +11,5 @@
             return false;
         }
         alert('Login successful');
-
     } 
 </script>

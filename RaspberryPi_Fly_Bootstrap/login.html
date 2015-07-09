@@ -2,7 +2,49 @@
 <html lang="en">
 
 <head>
-
+<script>
+    function validateLogin() {
+        var username = document.getElementById("usernameInput").value;
+        var password = document.getElementById("passwordInput").value;
+        if (username == null || username == "") {
+            alert("Please enter the username.");
+            return false;
+        }
+        if (password == null || password == "") {
+            alert("Please enter the password.");
+            return false;
+        }
+        alert('Login successful');
+    } 
+    </script>
+    <script>
+    
+    function validateRegister() {
+        var firstName = document.getElementById("firstNameInput").value;
+        var lastName = document.getElementById("lastNameInput").value;
+        var usernameR =
+document.getElementById("usernameInput1").value;
+        var passwordR = 
+document.getElementById("passwordInput1").value;
+        if (firstName == null || firstName == "") {
+            alert("Please enter your first name.");
+            return false;
+        }
+        if (lastName == null || lastName == "") {
+            alert("Please enter the last Name.");
+            return false;
+            
+        if (usernameR == null || usernameR == "") {
+            alert("Please enter in a username.");
+            return false;
+            
+        if (passwordR == null || passwordR == "") {
+            alert("Please enter in a password.");
+            return false;
+        }
+        alert('Registration successful');
+    }
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,7 +128,7 @@
     </div>
     <div class="form-group">
       <label for="passwordLabel">Password:</label>
-      <input type="text" name="password" class="form-control" id="passwordInput" placeholder="Enter Password">
+      <input type="password" name="password" class="form-control" id="passwordInput" placeholder="Enter Password">
     </div>  
   </div>
 
@@ -95,19 +137,14 @@
     <section id="bottomButtons" class="payment bg-primary">
         <div class="container">
             <div class="row text-right">
-                    <a href="confirmation.html" value= "Login" id="submit" onClick="validate()"  class="btn btn-dark btn-lg">Check Flights</a>
+                    <input type="button" value="Check Flight" id="submit" onClick="validateLogin()"  class="btn btn-dark btn-lg"></input>
                     <a href="search.html" class="btn btn-dark btn-lg">Search Flights</a>
                   </div>
              </div>
         </section>
     </section>
-
-
         <!-- Login -->
-    
-    
     <!--Register-->
-    
         <section id="search" class="search bg-primary">
         
         <div class="container">
@@ -115,7 +152,6 @@
             <h1> Register</h1>
             <hr></hr>
             </center>
-        
 <form role="form">
     
     <div class="form-group">
@@ -128,11 +164,11 @@
     </div> 
     <div class="form-group">
       <label for="usernameLabel">Username:</label>
-      <input type="text" class="form-control" id="usernameInput" placeholder="Enter Username">
+      <input type="text" class="form-control" id="usernameInput1" placeholder="Enter Username">
     </div> 
     <div class="form-group">
       <label for="passwordLabel">Password:</label>
-      <input type="text" class="form-control" id="passwordInput" placeholder="Enter Password">
+      <input type="password" class="form-control" id="passwordInput1" placeholder="Enter Password">
     </div> 
   </div>
 
@@ -141,7 +177,7 @@
     <section id="bottomButtons" class="payment bg-primary">
         <div class="container">
             <div class="row text-right">
-                    <a href="search.html" class="btn btn-dark btn-lg">Register</a>
+                <input type="button" value="Register" id="submit" onClick="validateRegister()"  class="btn btn-dark btn-lg"></input>    
                   </div>
              </div>
         </section>
